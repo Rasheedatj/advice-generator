@@ -36,6 +36,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
 }
+
 .wrapper h3 {
   text-transform: uppercase;
   color: var(--NeonGreen);
@@ -47,6 +48,20 @@ body {
 .wrapper q {
   color: var(--LightCyan);
   text-align: center;
+}
+
+.copy_advice {
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(218, 23%, 16%);
+  border: none;
+  border-radius: 10px;
+  padding: 0.7em 1em;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 16px hsl(150, 100%, 66%, 0.2);
+  margin-bottom: 0.5em;
+  margin-inline: auto;
 }
 
 .icon {

@@ -3,6 +3,8 @@ let changeBtn = document.querySelector('.icon');
 let blur = document.querySelector('.blur');
 const adviceQuote = document.querySelector('.advice');
 
+const copyBtn = document.querySelector('.copy_advice');
+
 function fetchAdvice2() {
   adviceQuote.innerHTML = 'Loading...';
   const advicePromise = new Promise((resolve, reject) => {
@@ -26,4 +28,15 @@ function fetchAdvice2() {
   });
 }
 
+async function copyAdvice() {
+  await navigator.clipboard.writeText(adviceQuote.innerHTML);
+
+  document.querySelector('.copy_advice').innerHTML = 'Copied!';
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  document.querySelector('.copy_advice').innerHTML = 'Copy advice';
+}
+
 changeBtn.addEventListener('click', fetchAdvice2);
+copyBtn.addEventListener('click', copyAdvice);
